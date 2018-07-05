@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<template id="my_expenses" name="Link to register expenses" inherit_id="portal.frontend_layout"> 
+        <xpath expr="//li[@id='o_logout']" position="before">
+            <li>
+            	<a href="/my/expenses" role="menuitem">My Expenses</a>
+            </li>
+        </xpath>
+    </template>
+</odoo>

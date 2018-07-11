@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-	<data>
-		<record id="model_hr_expense" model="ir.model">
-			<field name="website_form_access" eval="True" />
-			<field name="website_form_label">Submit a expense</field>
-		</record>
+	<record id="hr_expense.model_hr_expense" model="ir.model">
+		<field name="website_form_access" eval="True" />
+		<field name="website_form_label">Submit a expense</field>
+	</record>
 
-		<function model="ir.model.fields" name="formbuilder_whitelist">
-			<value>hr.expense</value>
-			<value eval="[
-					'name',
-					'product_id',
-					'employee_id',
-					'unit_amount',
-					'quantity',
-					'payment_mode',
-					'date',					
-					'description'
-				]"
-			/>
-		</function>
-	</data>
+	<function model="ir.model.fields" name="formbuilder_whitelist">
+		<value>hr.expense</value>
+		<value eval="[
+			'name',
+			'unit_amount',
+			'quantity',
+			'payment_mode',
+			'date',
+			'description',
+			'x_project_id',
+			'reference',
+			'product_id',
+			'employee_id'
+			]"/>
+	</function>
 </odoo>

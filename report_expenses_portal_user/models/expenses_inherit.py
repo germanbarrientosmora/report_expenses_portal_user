@@ -1,5 +1,5 @@
 """
-* Created by gonzalezoscar on 5/07/18
+* Created by gonzalezoscar on 6/07/18
 * report_expenses_portal_user
 """
 
@@ -7,8 +7,10 @@
 from odoo import api, fields, models
 
 
-class ExpensesInherit(models.Model):
+class ExpensesInheritedFrontend(models.Model):
     _inherit = 'hr.expense'
+    _name = 'hr.expense'
+    _description = "Expenses register"
 
     x_project_id = fields.Many2one(
         'project.project',

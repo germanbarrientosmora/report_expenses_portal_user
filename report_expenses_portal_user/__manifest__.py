@@ -2,9 +2,11 @@
 {
     'name': "Report expenses from website",
 
-    'summary': 
+    'summary':
         """
-            Report expenses form website with a portal user
+            * Create expenses form website with a portal user. \n
+            * A expense can be related to a project.
+            * Edited from terminal to Odoo.sh
         """,
 
     'description':
@@ -12,19 +14,31 @@
             A employee has a portal user, this user can report expenses it is related to a project.
         """,
 
-    'author': "Soluciones4G",
-    'website': "",
+    'author': "Soluciones4G - OGM",
+    'website': "www.soluciones4g.com",
+    'license': 'AGPL-3',
 
     'category': 'Extra Tools',
-    'version': '1.0',
+    'version': '0.1',
 
     'depends': [
+        'base',
+        'web',
+        'website_form',
+        'hr_expense',
+        'project',
+        'product'
     ],
 
     'demo': [],
 
     'data': [
-
+        'data/website_data.xml',
+        'views/expense_inherit_view.xml',
+        'views/project_inherit_view.xml',
+        'static/src/xml/frontend_custom_assets.xml',
+        'views/portal_templates.xml',
+        'data/website_menuitems.xml',
     ],
 
     'installable': True,

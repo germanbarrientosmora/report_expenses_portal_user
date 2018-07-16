@@ -28,16 +28,10 @@ class RegisterExpenseControllers(http.Controller):
             ]
         )
 
-        print ("\n OBJ del empleado")
-        print (employee_obj)
-
         projects_ids = []
 
         for task in tasks_users:
             projects_ids.append(task.project_id.id)
-
-        print ("\n Proyectos")
-        print (projects_ids)
 
         projects = http.request.env['project.project'].sudo().search(
             [
@@ -87,9 +81,6 @@ class RegisterExpenseControllers(http.Controller):
             'x_project_id': x_project_id,
             'employee_id': int(employee_id),
         }
-
-        print ("\n -------------------Expense data to create")
-        print (expense_data)
 
         expense_record = http.request.env['hr.expense'].sudo().create(expense_data)
 

@@ -6,7 +6,6 @@
         """
             * Create expenses form website with a portal user. \n
             * A expense can be related to a project.
-            * Edited from terminal to Odoo.sh
         """,
 
     'description':
